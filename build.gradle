@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.nycjv321'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    // enable TestNG support (default is JUnit)
+    useTestNG()
+}
+
+dependencies {
+    testCompile group: 'com.applitools', name: 'eyes-selenium-java3', version: '3.158.8'
+    testCompile 'org.testng:testng:6.8'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.141.59'
+}
